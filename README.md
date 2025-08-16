@@ -8,7 +8,7 @@ Every day, I create a new folder with the programs I wrote and update `progress.
 - `progress.md` = my daily notes and reflections.  
 - Code inside each day’s folder = the exercises, examples, or mini-programs I practiced.  
 
-📖 Check out my daily log here → [progress.md](progress.md)
+📖 Check out my daily log here → [progress.md](https://github.com/ai-nihar/Python_learning/blob/main/Progress.md)
 
 ## 🎯 Why This Repo?
 - To keep myself consistent in learning Python.  
