@@ -1,23 +1,21 @@
 # Day 0 – Setup and First Steps 🚀
+- Set up **Python** and **PyCharm IDE** on my system. ⚡  
+- Successfully ran my very first Python program:
+    ```python
+    print("Hello, World!")
+    ```
+---
 
-- Installed **Python** on my system. ✅  
-- Set up **PyCharm IDE** for development. ⚡  
-- Successfully ran my very first Python program:  
+# Day 1 – Python Basics 📘
+📅 2025-08-25  
 
-```python
-print("Hello, World!")
-```
-
-# Day 1: Python Basics  
-📅 Date: 2025-08-25  
-
-### 📚 What I Learned
-- Using `print()` with `sep`, `end`, and f-strings.  
-- Variables and data types: `int`, `float`, `str`, `bool`, `None`.  
-- Operators: arithmetic, comparison, logical, bitwise.  
-- Type casting and `bool()` behavior with strings/numbers.  
-- Taking user input (`input()`) and converting it to int/float.  
+### 📚 Learned
+- `print()` with `sep`, `end`, and **f-strings**  
+- Core data types: `int`, `float`, `str`, `bool`, `None`  
+- Operators: arithmetic, comparison, logical, bitwise  
+- Type casting (`int()`, `float()`, `str()`, `bool()`)  
+- User input with `input()` and conversions  
 
 ### 💡 Key Takeaway
-`input()` always returns a string → must convert for math.  
-Also, f-strings make printing much cleaner.  
+`input()` always returns a string → convert for math.  
+**f-strings** are the cleanest way to format output.  
