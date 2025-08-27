@@ -19,3 +19,19 @@
 ### 💡 Key Takeaway
 `input()` always returns a string → convert for math.  
 **f-strings** are the cleanest way to format output.  
+
+---
+
+# Day 2 – Control Flow 🎯
+📅 2025-08-26  
+
+### 📚 Learned
+- Conditionals: `if`, `elif`, `else`, nested & shorthand  
+- Loops: `while`, `for`, `range()`, iterating over strings/lists/dicts  
+- Loop controls: `break`, `continue`, `pass`  
+
+### 💡 Key Takeaway
+Branching (`if`) + Repetition (`for/while`) = core logic control.  
+
+### 📝 Practice
+- Number classification, star patterns, multiplication table, string reversal.  
