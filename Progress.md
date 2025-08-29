@@ -5,6 +5,7 @@
     print("Hello, World!")
     ```
 ---
+---
 
 # Day 1 – Python Basics 📘
 📅 2025-08-25  
