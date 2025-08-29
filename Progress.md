@@ -4,7 +4,7 @@
     ```python
     print("Hello, World!")
     ```
----
+
 ---
 
 # Day 1 – Python Basics 📘
