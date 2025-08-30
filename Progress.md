@@ -36,3 +36,7 @@ Branching (`if`) + Repetition (`for/while`) = core logic control.
 
 ### 📝 Practice
 - Number classification, star patterns, multiplication table, string reversal.  
+
+---
+
+From 27th to 31st August there will be no posts on this repo for personal reasons (series will be continued after that...)
