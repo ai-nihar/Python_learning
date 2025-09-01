@@ -24,23 +24,38 @@ print()
 # 2. Common String Methods
 # ======================================================
 text = "  Hello, Python World!  "
-print("Original:", repr(text))
-print("lower():", text.lower())
-print("upper():", text.upper())
-print("strip():", text.strip())
-print("lstrip():", text.lstrip())
-print("rstrip():", text.rstrip())
-print("replace():", text.replace("Python", "Java"))
-print("split():", text.split())
-print("find('Python'):", text.find("Python"))
-print("count('o'):", text.count('o'))
-print("startswith('  Hello'):", text.startswith("  Hello"))
-print("endswith('!  '):", text.endswith("!  "))
-print("capitalize():", text.capitalize())
-print("title():", text.title())
-print("isalpha() on 'Hello':", "Hello".isalpha())
-print("isdigit() on '123':", "123".isdigit())
-print("isalnum() on 'abc123':", "abc123".isalnum())
+
+print("Original:", repr(text))  # Shows the string with whitespace and escape characters
+
+# --- Case Conversion ---
+print("lower():", text.lower())      # All characters to lowercase -> '  hello, python world!  '
+print("upper():", text.upper())      # All characters to uppercase -> '  HELLO, PYTHON WORLD!  '
+
+# --- Whitespace Removal ---
+print("strip():", text.strip())      # Remove leading/trailing whitespace -> 'Hello, Python World!'
+print("lstrip():", text.lstrip())    # Remove leading whitespace -> 'Hello, Python World!  '
+print("rstrip():", text.rstrip())    # Remove trailing whitespace -> '  Hello, Python World!'
+
+# --- Replace & Split ---
+print("replace('Python', 'Java'):", text.replace("Python", "Java"))  # Replace 'Python' with 'Java' -> '  Hello, Java World!  '
+print("split():", text.split())      # Split into list of words (by whitespace) -> ['Hello,', 'Python', 'World!']
+
+# --- Search & Count ---
+print("find('Python'):", text.find("Python"))  # Index of 'Python' (returns -1 if not found) -> 9
+print("count('o'):", text.count('o'))          # Number of 'o' in string -> 3
+
+# --- Start/End Checks ---
+print("startswith('  Hello'):", text.startswith("  Hello"))  # True if string starts with '  Hello' -> True
+print("endswith('!  '):", text.endswith("!  "))              # True if string ends with '!  ' -> True
+
+# --- Capitalization ---
+print("capitalize():", text.capitalize())      # First letter uppercase, rest lowercase -> '  hello, python world!  '
+print("title():", text.title())              # First letter of each word uppercase -> '  Hello, Python World!  '
+
+# --- Character Checks ---
+print("isalpha() on 'Hello':", "Hello".isalpha())      # True if all chars are letters -> True
+print("isdigit() on '123':", "123".isdigit())          # True if all chars are digits -> True
+print("isalnum() on 'abc123':", "abc123".isalnum())    # True if all chars are alphanumeric -> True
 print()
 
 # ======================================================
@@ -84,29 +99,25 @@ print()
 # ======================================================
 # 7. Practice Exercises
 # ======================================================
-# 1. Take a string input and print it reversed.
+# 1. Reverse a string input by the user
 user_str = input("Enter a string to reverse: ")
-print("Reversed:", user_str[::-1])
+print("Reversed:", user_str[::-1])  # Slicing with [::-1] reverses the string
 
-# 2. Count vowels in a string.
+# 2. Count vowels in the string
 vowels = "aeiouAEIOU"
-count = 0
-for char in user_str:
-    if char in vowels:
-        count += 1
+count = sum(1 for char in user_str if char in vowels)  # Generator expression for clarity
 print("Number of vowels:", count)
 
-# 3. Check if a string is a palindrome.
+# 3. Check if the string is a palindrome
 if user_str == user_str[::-1]:
     print("It's a palindrome!")
 else:
     print("Not a palindrome.")
 
-# 4. Split a sentence into words and join with '-'.
+# 4. Split a sentence and join with '-'
 sentence = input("Enter a sentence: ")
-words = sentence.split()
+words = sentence.split()  # Splits by whitespace
 print("Joined with '-':", '-'.join(words))
 
-# 5. Replace spaces with underscores in a string.
+# 5. Replace spaces with underscores
 print("With underscores:", sentence.replace(' ', '_'))
-
