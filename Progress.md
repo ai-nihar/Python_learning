@@ -2,7 +2,7 @@
 - Set up **Python** and **PyCharm IDE** on my system. ⚡  
 - Successfully ran my very first Python program:
     ```python
-    print("Hello, World!")
+  print("Hello, World!")
     ```
 
 ---
@@ -35,4 +35,30 @@
 Branching (`if`) + Repetition (`for/while`) = core logic control.  
 
 ### 📝 Practice
-- Number classification, star patterns, multiplication table, string reversal.  
+- Number classification, star patterns, multiplication table, string reversal.
+
+---
+
+# Day 3 – Strings Deep Dive & Pattern Practice 🔄
+📅 2025-09-01  
+
+### ⏸️ Note
+Took a short break for a few days—back today with a revision and catch-up session!
+
+### 📚 Learned & Revised
+- **String slicing & indexing**: Accessing and manipulating substrings
+- **String methods**: `lower()`, `upper()`, `strip()`, `replace()`, `split()`, `join()`, `find()`, `count()`, `startswith()`, `endswith()`, `capitalize()`, `title()`, `isalpha()`, `isdigit()`, `isalnum()`, etc.
+- **Escape characters & raw strings**: Handling special characters in strings
+- **String concatenation & repetition**
+- **String formatting**: f-strings, `.format()`, `%` operator
+- **Useful built-in functions**: `abs()`, `round()`, `min()`, `max()`, `sum()`, `len()`, `enumerate()`, `zip()`, `sorted()`, `reversed()`
+- **Pattern printing with loops**: Square, triangles, diamond, hourglass, butterfly, and more
+- **Best practices**: Naming, code style, and documentation
+
+### 💡 Key Takeaway
+Today was all about reinforcing the basics, filling in any gaps from previous days, and getting comfortable with string operations and loop-based patterns.
+
+### 📝 Practice
+- Wrote and refactored classic pattern printing programs
+- Practiced string manipulations and explored more built-in functions
+- Reviewed and improved code style and documentation
