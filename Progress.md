@@ -62,3 +62,19 @@ Today was all about reinforcing the basics, filling in any gaps from previous da
 - Wrote and refactored classic pattern printing programs
 - Practiced string manipulations and explored more built-in functions
 - Reviewed and improved code style and documentation
+
+---
+
+# Day 4 – Lists Mastery & Advanced Tips 📝  
+📅 2025-09-02  
+
+### 📚 Learned & Practiced  
+- List creation, indexing, slicing, and mutability  
+- Adding/removing items: `append()`, `insert()`, `extend()`, `remove()`, `pop()`, `del`, `clear()`  
+- List comprehensions, sorting, copying, joining, and nested lists  
+- Useful methods: `count()`, `index()`, `reverse()`  
+- Advanced: negative indices, list multiplication, batch deletion, unpacking, `zip()`, shallow vs deep copy  
+- Practice: aggregation, filtering, flattening, removing duplicates, and more
+
+### 💡 Key Takeaway  
+Deepened understanding of Python lists, explored edge cases, and practiced with real-world scenarios.
