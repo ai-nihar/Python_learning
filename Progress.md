@@ -78,3 +78,20 @@ Today was all about reinforcing the basics, filling in any gaps from previous da
 
 ### 💡 Key Takeaway  
 Deepened understanding of Python lists, explored edge cases, and practiced with real-world scenarios.
+
+---
+
+# Day 5 – Tuples: Fundamentals & Advanced Usage 📝  
+📅 2025-09-04  
+
+### 📚 Learned & Practiced  
+- Tuple creation, indexing, slicing, and immutability  
+- Tuple unpacking (basic and extended)  
+- Looping through tuples (for, while)  
+- Joining, repeating, and tuple methods (`count()`, `index()`)  
+- Tuple vs List: key differences and use cases  
+- Nested tuples and tuple conversion  
+- Built-in functions: `len()`, `min()`, `max()`, `sum()`  
+- Real-world examples: function returns, coordinates, dictionary keys  
+- Advanced: named tuples, `zip()`, `enumerate()`, nested unpacking, generator expressions  
+- Practice exercises for hands-on learning  
