@@ -94,4 +94,18 @@ Deepened understanding of Python lists, explored edge cases, and practiced with 
 - Built-in functions: `len()`, `min()`, `max()`, `sum()`  
 - Real-world examples: function returns, coordinates, dictionary keys  
 - Advanced: named tuples, `zip()`, `enumerate()`, nested unpacking, generator expressions  
-- Practice exercises for hands-on learning  
+- Practice exercises for hands-on learning
+
+---
+
+# Day 6 – Dictionaries & Sets Mastery 🧭
+📅 2025-09-18  
+
+### 📚 Learned & Practiced  
+- Dictionaries: creation (literals, dict(), zip, fromkeys), access ([], get), update/insert, removal (pop, popitem, del, clear), iteration (keys, values, items), comprehensions, merging (|, |=), nested dicts, shallow vs deep copy, useful methods (get, setdefault, update), and collections tools (defaultdict, Counter).
+- Sets: creation (set literals, set()), uniqueness, membership, set algebra (union, intersection, difference, symmetric diff), relations (subset, superset, disjoint), mutating ops (add, update, remove, discard, pop, clear), in-place ops (|=, &=, -=, ^=), comprehensions, frozenset, and common patterns (dedupe, tag overlap).
+
+### 💡 Key Takeaway  
+Dicts and sets power fast lookups, de-duplication, counting, and clean data transforms—core tools for writing efficient Python.
+
+---
