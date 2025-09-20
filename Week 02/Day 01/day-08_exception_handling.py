@@ -1,46 +1,63 @@
 """
 ======================================================
 Python Learning - Week 02 Day 01 (Day 8 Overall)
-TOPIC: Exception Handling
+TOPIC: EXCEPTION HANDLING
 ======================================================
-This file covers exception handling in Python:
-- What errors and exceptions are
-- How to handle exceptions with try/except
-- How to use finally, else, and raise
-- How to create custom exceptions
+
+DESCRIPTION:
+This file covers exception handling in Python, which is essential for writing
+robust and error-resistant code. Exception handling allows programs to
+gracefully respond to unexpected conditions without crashing.
+
+TOPICS COVERED:
+1. Understanding Errors & Exceptions
+2. Basic Exception Handling with try/except
+3. Advanced Exception Handling (else, finally, raise)
+4. Creating Custom Exceptions
+
+LEARNING OUTCOMES:
+- Recognize common Python exceptions
+- Handle errors appropriately using try/except blocks
+- Implement advanced exception handling techniques
+- Create custom exceptions for specific use cases
+
 ======================================================
 """
-
-print("=" * 50)
-print("DAY 8: EXCEPTION HANDLING")
-print("=" * 50)
-print()
 
 # ======================================================
 # 1) Understanding Errors & Exceptions
 # ======================================================
-print("1. UNDERSTANDING ERRORS & EXCEPTIONS")
-print("-" * 40)
+"""
+Python has two types of errors:
+- Syntax errors: Code that Python cannot parse
+- Exceptions: Runtime errors that occur during execution
 
-# 1.1 Common built-in exceptions
+Exceptions occur when something unexpected happens while 
+your program is running. Instead of letting the program crash,
+we can "catch" these exceptions and handle them.
+"""
+
+# 1.1 Common built-in exceptions with examples
+print("\n1. UNDERSTANDING ERRORS & EXCEPTIONS")
+print("-" * 40)
 print("1.1. Common exception types:")
 
 # TypeError: when an operation is performed on an inappropriate type
 print("\nTypeError example:")
 try:
-    result = "5" + 5
+    result = "5" + 5  # Attempting to add string and integer
     print(result)
 except TypeError as e:
     print(f"Error caught: {e}")
     print("Can't add string and integer directly")
     # Correct solution:
-    result = int("5") + 5
-    print(f"Corrected: {result}")
+    result = int("5") + 5  # Convert string to int first
+    print(f"Corrected result: {result}")  # Output: 10
 
 # ValueError: when a function receives an argument of correct type but inappropriate value
 print("\nValueError example:")
 try:
-    number = int("hello")
+    number = int("hello")  # Trying to convert non-numeric string to int
 except ValueError as e:
     print(f"Error caught: {e}")
     print("Can't convert 'hello' to an integer")
@@ -49,7 +66,7 @@ except ValueError as e:
 print("\nIndexError example:")
 fruits = ["apple", "banana", "cherry"]
 try:
-    print(fruits[10])
+    print(fruits[10])  # Trying to access 11th element in a 3-item list
 except IndexError as e:
     print(f"Error caught: {e}")
     print(f"The list only has {len(fruits)} items")
@@ -58,26 +75,33 @@ except IndexError as e:
 print("\nKeyError example:")
 person = {"name": "John", "age": 30}
 try:
-    print(person["height"])
+    print(person["height"])  # Trying to access a key that doesn't exist
 except KeyError as e:
     print(f"Error caught: {e}")
     print(f"Dictionary doesn't have a 'height' key")
-    print(f"Available keys: {person.keys()}")
+    print(f"Available keys: {list(person.keys())}")
 
 # ZeroDivisionError: when dividing by zero
 print("\nZeroDivisionError example:")
 try:
-    result = 10 / 0
+    result = 10 / 0  # Division by zero
 except ZeroDivisionError as e:
     print(f"Error caught: {e}")
     print("Division by zero is not allowed in math")
 
-print()
 
 # ======================================================
 # 2) Basic Exception Handling with try/except
 # ======================================================
-print("2. BASIC EXCEPTION HANDLING")
+"""
+The try/except block is used to handle exceptions in Python:
+- try: Contains code that might raise an exception
+- except: Executes when an exception occurs in the try block
+
+This prevents your program from crashing when errors occur.
+"""
+
+print("\n2. BASIC EXCEPTION HANDLING")
 print("-" * 40)
 
 # The basic structure
@@ -87,15 +111,15 @@ try:
     age = int(input("Enter your age: "))
     print(f"Next year you'll be {age + 1}")
 except:
-    # This catches ANY exception (not recommended)
+    # This catches ANY exception (not recommended in production code)
     print("That's not a valid age")
 
 # Catching specific exceptions (recommended)
-print("\n2.2. Catching specific exceptions:")
+print("\n2.2. Catching specific exceptions (recommended practice):")
 try:
     user_input = input("Enter a number to divide 100 by: ")
-    number = float(user_input)
-    result = 100 / number
+    number = float(user_input)  # Might cause ValueError
+    result = 100 / number       # Might cause ZeroDivisionError
     print(f"100 / {number} = {result}")
 except ValueError:
     print("Error: Please enter a valid number")
@@ -107,17 +131,25 @@ print("\n2.3. Handling multiple exceptions together:")
 try:
     data = {"a": 100, "b": 0}
     key = input("Enter a key (a or b): ")
-    result = 10 / data[key]
+    result = 10 / data[key]  # Potential KeyError or ZeroDivisionError
     print(f"10 / data['{key}'] = {result}")
 except (KeyError, ZeroDivisionError) as e:
+    # The 'as e' syntax captures the exception object
     print(f"Operation failed: {type(e).__name__}: {e}")
 
-print()
 
 # ======================================================
 # 3) Advanced Exception Handling
 # ======================================================
-print("3. ADVANCED EXCEPTION HANDLING")
+"""
+Python provides additional components for more sophisticated
+exception handling:
+- else: Runs if no exception occurred
+- finally: Always runs, regardless of exceptions
+- raise: Manually triggers an exception
+"""
+
+print("\n3. ADVANCED EXCEPTION HANDLING")
 print("-" * 40)
 
 # 3.1 try/except/else/finally structure
@@ -126,23 +158,37 @@ try:
     # Code that might raise an exception
     number = int(input("Enter a positive number: "))
 
-    # This will only run if no exception occurs
+    # This will only run if no exception occurs in the above code
     if number <= 0:
         raise ValueError("The number must be positive")
 
 except ValueError as e:
+    # Runs if a ValueError occurs in the try block
     print(f"Invalid input: {e}")
 else:
-    # This block runs if no exception occurred in the try block
+    # This block runs ONLY if no exception occurred in the try block
     print(f"You entered the valid number: {number}")
     print(f"Square root: {number ** 0.5:.2f}")
 finally:
-    # This always runs, regardless of whether an exception occurred
+    # This ALWAYS runs, regardless of whether an exception occurred
     print("Exception handling complete")
 
 # 3.2 Raising exceptions manually
 print("\n3.2. Raising exceptions manually:")
 def set_age(age):
+    """
+    Set a person's age, with validation.
+
+    Args:
+        age: The age to set
+
+    Raises:
+        TypeError: If age is not an integer
+        ValueError: If age is not between 0 and 120
+
+    Returns:
+        str: Confirmation message
+    """
     if not isinstance(age, int):
         raise TypeError("Age must be an integer")
     if age < 0 or age > 120:
@@ -151,21 +197,28 @@ def set_age(age):
 
 try:
     print(set_age(25))      # Works fine
-    print(set_age("30"))    # TypeError
+    print(set_age("30"))    # Raises TypeError
 except Exception as e:
     print(f"Error: {type(e).__name__}: {e}")
 
 try:
-    print(set_age(130))     # ValueError
+    print(set_age(130))     # Raises ValueError
 except Exception as e:
     print(f"Error: {type(e).__name__}: {e}")
 
-print()
 
 # ======================================================
 # 4) Creating Custom Exceptions
 # ======================================================
-print("4. CREATING CUSTOM EXCEPTIONS")
+"""
+You can create your own exception classes by inheriting from Exception.
+This allows you to define domain-specific errors for your applications.
+
+Custom exceptions make your code more readable and can carry
+additional information relevant to the specific error.
+"""
+
+print("\n4. CREATING CUSTOM EXCEPTIONS")
 print("-" * 40)
 
 # Define a custom exception
@@ -174,6 +227,16 @@ class InvalidEmailError(Exception):
     pass
 
 def send_email(email, message):
+    """
+    Send an email (simulated)
+
+    Args:
+        email: Email address to send to
+        message: Email content
+
+    Raises:
+        InvalidEmailError: If email format is invalid
+    """
     # Basic check if email contains @ and .
     if '@' not in email or '.' not in email:
         raise InvalidEmailError("Invalid email format")
@@ -192,6 +255,8 @@ except InvalidEmailError as e:
 # More advanced custom exception
 print("\n4.2. More detailed custom exception:")
 class AgeError(Exception):
+    """Custom exception with additional information about the error"""
+
     def __init__(self, age, min_age, max_age):
         self.age = age
         self.min_age = min_age
@@ -199,75 +264,24 @@ class AgeError(Exception):
         message = f"Age {age} is outside allowed range ({min_age}-{max_age})"
         super().__init__(message)
 
-def verify_age(age):
-    min_age, max_age = 18, 65
+try:
+    age = 150
+    min_age, max_age = 0, 120
+
     if age < min_age or age > max_age:
         raise AgeError(age, min_age, max_age)
-    return f"Age {age} is valid"
 
-try:
-    print(verify_age(30))   # Valid
-    print(verify_age(15))   # Too young
+    print(f"Age {age} is valid")
 except AgeError as e:
     print(f"Error: {e}")
+    print(f"Provided age: {e.age}")
+    print(f"Allowed range: {e.min_age} to {e.max_age}")
 
-print()
-
-# ======================================================
-# 5) Best Practices & Tips
-# ======================================================
-print("5. BEST PRACTICES & TIPS")
-print("-" * 40)
-
-# 5.1 Don't catch all exceptions silently
-print("5.1. Avoid bare except clauses:")
-def bad_practice():
-    try:
-        # This will raise a ZeroDivisionError
-        return 10 / 0
-    except:
-        # Silently catching and ignoring the error - BAD!
-        return 0  # User has no idea what went wrong
-
-def better_practice():
-    try:
-        # This will raise a ZeroDivisionError
-        return 10 / 0
-    except ZeroDivisionError:
-        # Specific error handling - GOOD!
-        print("Warning: Division by zero detected, returning 0")
-        return 0
-
-print(f"Bad practice result: {bad_practice()}")
-print(f"Better practice result: {better_practice()}")
-
-# 5.2 Only catch exceptions you can handle
-print("\n5.2. Only catch exceptions you can handle:")
-def process_data(data):
-    # More specific exception handling pattern
-    try:
-        result = data['value'] / data['divisor']
-        return result
-    except KeyError as e:
-        # We know exactly what's missing
-        print(f"Missing key in data: {e}")
-        return None
-    except ZeroDivisionError:
-        # We can handle division by zero
-        print("Cannot divide by zero")
-        return None
-    except Exception as e:
-        # For unexpected errors, re-raise to avoid hiding bugs
-        print(f"Unexpected error: {e}")
-        raise
-
-# 5.3 Context managers: using 'with' for cleanup
-print("\n5.3. Using context managers:")
-print("Example with file handling:")
-print("with open('file.txt', 'w') as f:")
-print("    f.write('Hello world')")
-print("# File is automatically closed when the 'with' block ends")
-
-print("\n" + "=" * 50)
-print("End of Exception Handling Examples")
-print("=" * 50)
+"""
+SUMMARY:
+- Exception handling makes your code more robust by preventing crashes
+- Always use specific exception types rather than catching all exceptions
+- The try/except/else/finally structure provides comprehensive error handling
+- Custom exceptions help create clear, domain-specific error messages
+- Good exception handling improves user experience and helps with debugging
+"""
