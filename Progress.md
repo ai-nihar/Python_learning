@@ -13,8 +13,10 @@ This file gives a short, clear view of my progress. Detailed daily notes now liv
 - Full notes: [Week 01 – detailed notes](Week%2001/Week-01_Progress.md) · Folder: [Week 01](Week%2001/)
 
 ## Week 02 (Days 8–14)
-- Focus: Exception handling & file operations
-- Key wins: Creating robust error handlers & working with various file formats (CSV, JSON)
+- Focus: Exception handling, file operations, OOP fundamentals
+- Key wins: 
+  - Creating robust error handlers & working with various file formats (CSV, JSON)
+  - Building object-oriented programs with classes, constructors, encapsulation, and inheritance
 - Full notes: [Week 02 – detailed notes](Week%2002/Week-02_Progress.md) · Folder: [Week 02](Week%2002/)
 
 More weeks coming soon.
