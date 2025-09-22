@@ -37,4 +37,26 @@ Code files:
 
 ---
 
+# Day 10 – Intermediate OOP 🔄
+📅 2025-09-22
+
+### 📚 Learned
+- **Advanced Inheritance**: Multi-level inheritance and method overriding
+- **Polymorphism**: Using objects of different classes with the same interface
+- **Method Resolution Order**: Understanding method lookup in inheritance hierarchies
+- **Multiple Inheritance**: Working with multiple parent classes
+- **Custom Exceptions**: Creating exception hierarchies
+- **Property Decorators**: Clean syntax for getters and setters
+
+### 💡 Key Takeaway
+Intermediate OOP concepts make code more flexible, maintainable, and help model complex relationships between objects.
+
+Code files:
+- [Advanced Inheritance](./Day%2003/day-10_advanced_inheritance.py)
+- [Polymorphism](./Day%2003/day-10_polymorphism.py)
+- [Multiple Inheritance](./Day%2003/day-10_multiple_inheritance.py)
+- [Custom Exceptions & Properties](./Day%2003/day-10_custom_exceptions_properties.py)
+
+---
+
 Back to overview: [Progress.md](../Progress.md)
