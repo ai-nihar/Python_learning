@@ -59,4 +59,25 @@ Code files:
 
 ---
 
+# Day 11 – Advanced OOP & Design Patterns 🏗️
+📅 2025-09-23
+
+### 📚 Learned
+- **Composition vs Inheritance**: When to favor composition for code reuse
+- **Abstract Classes**: Creating blueprints for derived classes
+- **Design Patterns**: Singleton, Factory, and Observer patterns
+- **Context Managers**: Resource management with `__enter__` and `__exit__`
+- **Practical Applications**: Applying OOP principles to real-world problems
+
+### 💡 Key Takeaway
+Design patterns provide proven solutions to common programming challenges, while advanced OOP concepts help create robust, scalable applications.
+
+Code files:
+- [Composition vs Inheritance](./Day%2004/day-11_composition_vs_inheritance.py)
+- [Abstract Classes](./Day%2004/day-11_abstract_classes.py)
+- [Singleton & Factory Patterns](./Day%2004/day-11_design_patterns_singleton_factory.py)
+- [Observer Pattern & Context Managers](./Day%2004/day-11_observer_and_context_managers.py)
+
+---
+
 Back to overview: [Progress.md](../Progress.md)
