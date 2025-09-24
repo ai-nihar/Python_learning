@@ -6,11 +6,13 @@
 📅 2025-09-20  
 
 ### 📚 Learned
-- **Exception Handling**: `try/except`, error types, custom exceptions, best practices
+- **Exception Handling**: Understanding errors, try/except blocks, handling multiple exceptions
+- **Advanced Techniques**: else/finally clauses, raising exceptions, exception propagation
+- **Built-in Exception Types**: Using appropriate exception types for different error conditions
 - **File Handling**: Text & binary files, CSV, JSON, Pickle, file paths with `os.path`
 
 ### 💡 Key Takeaway
-Exception handling makes programs robust; file operations connect Python to external data.
+Exception handling prevents program crashes and provides graceful error recovery, making applications more robust and user-friendly.
 
 Code files: [Exception Handling](./Day%2001/day-08_exception_handling.py) · [File Handling](./Day%2001/day-08_file_handling.py)
 
@@ -77,6 +79,25 @@ Code files:
 - [Abstract Classes](./Day%2004/day-11_abstract_classes.py)
 - [Singleton & Factory Patterns](./Day%2004/day-11_design_patterns_singleton_factory.py)
 - [Observer Pattern & Context Managers](./Day%2004/day-11_observer_and_context_managers.py)
+
+---
+
+# Day 12 – Advanced Exception Handling 🛡️
+📅 2025-09-24
+
+### 📚 Learned
+- **Exception Hierarchies**: Understanding Python's exception structure and best practices
+- **Custom Exception Classes**: Creating domain-specific exceptions using OOP principles
+- **Exception Chaining**: Preserving context with `raise from` for better debugging
+- **Design Patterns for Error Handling**: Implementing retry, fallback, and circuit breaker patterns
+- **Exception Documentation**: Best practices for documenting exceptions in APIs
+
+### 💡 Key Takeaway
+Advanced exception handling techniques help create more robust applications that gracefully manage errors and provide better debugging information when problems occur.
+
+Code files:
+- [Basic & Custom Exceptions](./Day%2005/day-12_basic_and_custom_exceptions.py)
+- [Advanced Exception Techniques](./Day%2005/day-12_advanced_exception_techniques.py)
 
 ---
 
