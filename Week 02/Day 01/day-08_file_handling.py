@@ -16,15 +16,13 @@ TOPICS COVERED:
 3. Binary File Handling
 4. CSV File Processing
 5. JSON Data Handling
-6. Python Object Serialization (Pickle)
-7. File System Operations
-8. Best Practices
+6. File System Operations
+7. Best Practices
 
 LEARNING OUTCOMES:
 - Open, read, write, and close files safely
 - Navigate and manipulate file paths across platforms
 - Process structured data formats like CSV and JSON
-- Serialize and deserialize Python objects
 - Perform common file system operations
 - Follow best practices for file handling
 
@@ -34,7 +32,6 @@ LEARNING OUTCOMES:
 import os
 import csv
 import json
-import pickle
 from datetime import datetime
 
 """
@@ -248,9 +245,9 @@ dict_csv_file = os.path.join(EXAMPLE_DIR, "dict_data.csv")
 
 # Writing with DictWriter - uses dictionaries instead of lists
 dict_data = [
-    {'Name': 'Emily', 'Age': 24, 'City': 'Seattle'},
-    {'Name': 'Frank', 'Age': 31, 'City': 'Portland'},
-    {'Name': 'Grace', 'Age': 29, 'City': 'Austin'}
+    {'Name': 'Emily', 'Age': '24', 'City': 'Seattle'},
+    {'Name': 'Frank', 'Age': '31', 'City': 'Portland'},
+    {'Name': 'Grace', 'Age': '29', 'City': 'Austin'}
 ]
 
 with open(dict_csv_file, 'w', newline='') as file:
@@ -285,7 +282,7 @@ print("-" * 40)
 print("5.1. Writing JSON data:")
 json_file = os.path.join(EXAMPLE_DIR, "data.json")
 
-# Create a complex nested data structure
+# Create a nested data structure
 person = {
     'name': 'John Doe',
     'age': 30,
@@ -332,92 +329,42 @@ print(f"Language: {parsed_data['language']}, Typing: {parsed_data['typing']}")
 
 
 # ======================================================
-# 6) Using Pickle for Python Object Serialization
-# ======================================================
-"""
-Pickle is a Python-specific data serialization module that can
-convert complex Python objects into a byte stream (serialization)
-and back (deserialization). Unlike JSON, pickle can handle most
-Python objects like classes, functions, and more complex data.
-"""
-print("\n6. USING PICKLE FOR PYTHON OBJECT SERIALIZATION")
-print("-" * 40)
-
-# Warning about pickle
-print("⚠️ Warning: Only unpickle data from trusted sources! ⚠️")
-print("Pickle can execute arbitrary code during unpickling.\n")
-
-# 6.1 Creating a complex Python object
-print("6.1. Creating and pickling a Python object:")
-
-class Person:
-    """A simple class to demonstrate pickling"""
-
-    def __init__(self, name, age):
-        self.name = name
-        self.age = age
-        self.created_at = datetime.now()
-
-    def greet(self):
-        return f"Hello, my name is {self.name}!"
-
-# Create an instance of our Person class
-person = Person("Alex", 30)
-print(f"Created person object: {person.name}, {person.age} years old")
-print(f"Greeting: {person.greet()}")
-
-# 6.2 Pickle (serialize) the object
-pickle_file = os.path.join(EXAMPLE_DIR, "person.pickle")
-with open(pickle_file, 'wb') as file:  # Must use binary mode 'wb'
-    pickle.dump(person, file)
-print(f"\nPerson object pickled to {pickle_file}")
-
-# 6.3 Unpickle (deserialize) the object
-print("\n6.3. Unpickling the object:")
-with open(pickle_file, 'rb') as file:  # Must use binary mode 'rb'
-    loaded_person = pickle.load(file)
-print(f"Loaded person: {loaded_person.name}, {loaded_person.age} years old")
-print(f"Greeting: {loaded_person.greet()}")  # Methods still work!
-print(f"Creation time: {loaded_person.created_at}")  # Complex objects preserved
-
-
-# ======================================================
-# 7) File System Operations
+# 6) File System Operations
 # ======================================================
 """
 Python's os module provides many functions for interacting
 with the file system. These let you create, move, rename,
 and remove files and directories.
 """
-print("\n7. FILE SYSTEM OPERATIONS")
+print("\n6. FILE SYSTEM OPERATIONS")
 print("-" * 40)
 
-# 7.1 Creating a new directory
+# 6.1 Creating a new directory
 new_dir = os.path.join(EXAMPLE_DIR, "new_folder")
 if not os.path.exists(new_dir):
     os.mkdir(new_dir)  # Creates a single directory
-    print(f"7.1. Created directory: {new_dir}")
+    print(f"6.1. Created directory: {new_dir}")
 
-# 7.2 Creating temporary file
+# 6.2 Creating temporary file
 temp_file = os.path.join(new_dir, "temp.txt")
 with open(temp_file, 'w') as file:
     file.write("This is a temporary file.")
-print(f"\n7.2. Created temporary file: {temp_file}")
+print(f"\n6.2. Created temporary file: {temp_file}")
 
-# 7.3 Renaming a file
+# 6.3 Renaming a file
 renamed_file = os.path.join(new_dir, "renamed.txt")
 os.rename(temp_file, renamed_file)  # Move/rename the file
-print(f"\n7.3. Renamed file to: {renamed_file}")
+print(f"\n6.3. Renamed file to: {renamed_file}")
 
-# 7.4 Getting file information
-print("\n7.4. File information:")
+# 6.4 Getting file information
+print("\n6.4. File information:")
 file_stats = os.stat(renamed_file)  # Get file statistics
 print(f"Size: {file_stats.st_size} bytes")
 print(f"Last modified: {datetime.fromtimestamp(file_stats.st_mtime)}")
 print(f"Last accessed: {datetime.fromtimestamp(file_stats.st_atime)}")
 
-# 7.5 Removing files and directories
-print("\n7.5. Removing files and directories:")
+# 6.5 Removing files and directories
+print("\n6.5. Removing files and directories:")
 os.remove(renamed_file)  # Delete a file
 print(f"Removed file: {renamed_file}")
 os.rmdir(new_dir)  # Delete an empty directory
@@ -425,13 +372,13 @@ print(f"Removed directory: {new_dir}")
 
 
 # ======================================================
-# 8) Best Practices
+# 7) Best Practices
 # ======================================================
 """
 Following these best practices will help you write safer,
 more reliable code when working with files.
 """
-print("\n8. BEST PRACTICES")
+print("\n7. BEST PRACTICES")
 print("-" * 40)
 
 print("1. Always use the 'with' statement for file operations")
@@ -464,7 +411,6 @@ SUMMARY:
 - Python provides simple and powerful ways to work with files
 - The 'with' statement ensures files are properly closed
 - Different file formats (text, binary, CSV, JSON) require different techniques
-- Use Pickle for Python-specific data but be aware of security implications
 - The os module provides tools for working with files and directories
 - Following best practices prevents common file-handling issues
 """
