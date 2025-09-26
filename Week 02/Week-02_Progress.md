@@ -101,4 +101,42 @@ Code files:
 
 ---
 
+# Day 13 – Advanced Text & Tabular File Handling 📊
+📅 2025-09-25
+
+### 📚 Learned
+- **Advanced Text Files**: Working with different encodings and efficient navigation
+- **CSV Processing**: Advanced techniques for handling complex CSV data structures
+- **Excel Integration**: Reading, writing, and formatting Excel files with Python
+
+### 💡 Key Takeaway
+Mastering advanced file handling techniques enables efficient data processing and enables integration with various data formats used in real-world applications.
+
+Code files:
+- [Advanced Text Files](./Day%2006/day-13_01_advanced_text_files.py)
+- [Advanced CSV Processing](./Day%2006/day-13_02_advanced_csv.py)
+- [Excel Integration](./Day%2006/day-13_03_excel_files.py)
+
+---
+
+# Day 14 – Complex Data & Resource Management 🧰
+📅 2025-09-26
+
+### 📚 Learned
+- **JSON Techniques**: Handling nested structures, schema validation, and performance optimization
+- **Archive Files**: Creating and extracting ZIP archives and working with compressed data
+- **Configuration & Paths**: Managing application settings and cross-platform path handling
+- **Memory Efficiency**: Processing large files with minimal memory footprint
+
+### 💡 Key Takeaway
+Advanced file handling and resource management techniques are essential for building performant, production-ready applications that can handle real-world data requirements.
+
+Code files:
+- [JSON Techniques](./Day%2007/day-14_01_json_techniques.py)
+- [Archive Files](./Day%2007/day-14_02_archive_files.py)
+- [Configuration & Paths](./Day%2007/day-14_03_config_and_paths.py)
+- [Memory & Encodings](./Day%2007/day-14_04_memory_and_encodings.py)
+
+---
+
 Back to overview: [Progress.md](../Progress.md)
