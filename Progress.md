@@ -9,7 +9,7 @@ This file gives a short, clear view of my progress. Detailed daily notes now liv
   - Comfortable with loops and pattern creation
   - Using collections efficiently (lists, tuples, dicts, sets)
   - Writing reusable functions and exploring iterators
-- Tools: VSCode, PyCharm, Python 3.x
+- Tools: PyCharm, Python 3.13
 - Full notes: [Week 01 – detailed notes](Week%2001/Week-01_Progress.md) · Folder: [Week 01](Week%2001/)
 
 ## Week 02 (Days 8–14)
