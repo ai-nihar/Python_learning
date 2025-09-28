@@ -19,3 +19,18 @@ This file tracks my detailed daily progress during Week 3 of my Python learning 
   - [Standard Library](Day%2001/day-15_03_standard_library.py)
   - [Third-Party Packages](Day%2001/day-15_04_third_party_packages.py)
 
+## Day 16: Functional Programming Basics in Python
+- **Date**: September 28, 2023
+- **Focus**: Introduction to functional programming concepts in Python
+- **Topics Covered**:
+  - First-class functions
+  - Lambda expressions and anonymous functions
+  - Pure functions and side effects
+  - Built-in functional tools: map, filter, reduce
+  - Simple practical examples
+- **Progress**: Began exploring the functional programming paradigm in Python, understanding how functions can be treated as first-class citizens, and learned to use built-in functions for functional operations.
+- **Challenges**: Shifting mindset from imperative to functional thinking and understanding when functional approaches are most appropriate.
+- **Resources**: Python documentation on functional programming tools
+- **Files**: 
+  - [Functional Programming Basics](Day%2002/day-16_01_functional_programming_basics.py)
+  - [Practical Functional Examples](Day%2002/day-16_02_practical_examples.py)
