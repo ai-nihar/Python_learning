@@ -34,3 +34,19 @@ This file tracks my detailed daily progress during Week 3 of my Python learning 
 - **Files**: 
   - [Functional Programming Basics](Day%2002/day-16_01_functional_programming_basics.py)
   - [Practical Functional Examples](Day%2002/day-16_02_practical_examples.py)
+
+## Day 17: Advanced Functional Programming Techniques
+- **Date**: September 29, 2023
+- **Focus**: Deeper exploration of functional programming patterns in Python
+- **Topics Covered**:
+  - Function composition and pipelines
+  - Partial functions and currying
+  - Recursion in functional programming
+  - Immutability and functional data structures
+  - Functional approaches to error handling
+- **Progress**: Built on basic functional programming knowledge to explore more advanced patterns and techniques, learning how to compose functions and build data processing pipelines.
+- **Challenges**: Implementing advanced functional patterns in Python that aren't natively supported as in languages like Haskell or Scala.
+- **Resources**: Additional readings on functional programming paradigms
+- **Files**: 
+  - [Advanced Functional Programming](Day%2003/day-17_01_advanced_functional_programming.py)
+  - [Advanced Practical Examples](Day%2003/day-17_02_advanced_examples.py)
