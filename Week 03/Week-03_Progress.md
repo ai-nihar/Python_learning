@@ -50,3 +50,20 @@ This file tracks my detailed daily progress during Week 3 of my Python learning 
 - **Files**: 
   - [Advanced Functional Programming](Day%2003/day-17_01_advanced_functional_programming.py)
   - [Advanced Practical Examples](Day%2003/day-17_02_advanced_examples.py)
+
+## Day 18: Regular Expressions and Pattern Matching
+- **Date**: October 01, 2023
+- **Focus**: Understanding and applying regular expressions in Python
+- **Topics Covered**:
+  - Basic pattern matching and character classes
+  - Quantifiers, anchors, and boundaries
+  - Groups and capturing techniques
+  - Lookahead and lookbehind assertions
+  - Real-world regex applications and projects
+- **Progress**: Gained comprehensive understanding of regular expressions in Python, from basic syntax to advanced techniques. Learned how to use the `re` module effectively for text processing tasks, and built several practical applications using regex.
+- **Challenges**: Understanding complex pattern construction, especially with lookahead/lookbehind assertions. Optimizing regex patterns for performance.
+- **Resources**: Python documentation on regular expressions, online regex testers
+- **Files**: 
+  - [Regex Basics](Day%2004/day-18_01_regex_basics.py)
+  - [Advanced Regex](Day%2004/day-18_02_advanced_regex.py)
+  - [Practical Regex Projects](Day%2004/day-18_03_practical_regex_projects.py)
