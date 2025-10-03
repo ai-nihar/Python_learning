@@ -67,3 +67,19 @@ This file tracks my detailed daily progress during Week 3 of my Python learning 
   - [Regex Basics](Day%2004/day-18_01_regex_basics.py)
   - [Advanced Regex](Day%2004/day-18_02_advanced_regex.py)
   - [Practical Regex Projects](Day%2004/day-18_03_practical_regex_projects.py)
+
+## Day 19: Introduction to NumPy
+- **Date**: October 03, 2023
+- **Focus**: Learning the fundamentals of numerical computing with NumPy
+- **Topics Covered**:
+  - NumPy array creation and attributes
+  - Array indexing, slicing, and manipulation
+  - Basic mathematical operations on arrays
+  - Broadcasting concepts
+  - Random data generation
+  - Array storage and retrieval
+- **Progress**: Gained understanding of NumPy's core data structure (ndarray) and learned to perform efficient numerical operations. Explored how NumPy serves as the foundation for scientific computing in Python.
+- **Challenges**: Understanding broadcasting rules and multi-dimensional array operations. Learning the differences between Python lists and NumPy arrays.
+- **Resources**: NumPy documentation, Python Data Science Handbook
+- **Files**: 
+  - [NumPy Basics](Day%2005/day-19_01_numpy_basics.py)
